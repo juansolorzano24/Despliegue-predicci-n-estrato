@@ -124,7 +124,7 @@ if st.button('Predecir estrato'):
         'valor_m2': [valor_m2],
         'tipo_const': [tipo_const],
         'descripcion_tipo_const': [descripcion_tipo],
-        'Prediccion': [int(Y_pred[0])]
+        'Estrato': [int(Y_pred[0])]
     })
 
     st.header('PREDICCIONES')
