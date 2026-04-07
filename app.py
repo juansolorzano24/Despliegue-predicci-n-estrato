@@ -17,7 +17,7 @@ with open(filename, 'rb') as f:
 # =========================
 # PARÁMETRO DE EXACTITUD
 # =========================
-exactitud_modelo = 0.7   # Ajusta este valor según tu resultado final real
+exactitud_modelo = 0.70
 
 # =========================
 # DICCIONARIO DE TIPOS DE CONSTRUCCIÓN
@@ -41,17 +41,43 @@ tipos_construccion = {
     'ZC': 'Zona común'
 }
 
-opciones_mostradas = [f"{sigla} - {descripcion}" for sigla, descripcion in tipos_construccion.items()]
+opciones_mostradas = [
+    f"{sigla} - {descripcion}"
+    for sigla, descripcion in tipos_construccion.items()
+]
 
 # =========================
 # INTERFAZ
 # =========================
 st.title('Predicción de estrato socioeconómico')
-st.write('Ingrese los datos del predio o construcción para estimar el estrato con el modelo de árbol de decisión.')
+st.write(
+    'Ingrese los datos del predio o construcción para estimar el estrato '
+    'con el modelo de árbol de decisión.'
+)
 
-numero_pis = st.number_input('Número de pisos', min_value=1.0, max_value=100.0, value=1.0, step=1.0)
-area_const = st.number_input('Área construida', min_value=1.0, max_value=100000.0, value=50.0, step=1.0)
-valor_m2 = st.number_input('Valor por m²', min_value=0.0, max_value=100000000.0, value=1500000.0, step=1000.0)
+numero_pis = st.number_input(
+    'Número de pisos',
+    min_value=1.0,
+    max_value=100.0,
+    value=1.0,
+    step=1.0
+)
+
+area_const = st.number_input(
+    'Área construida',
+    min_value=1.0,
+    max_value=100000.0,
+    value=50.0,
+    step=1.0
+)
+
+valor_m2 = st.number_input(
+    'Valor por m²',
+    min_value=0.0,
+    max_value=100000000.0,
+    value=1500000.0,
+    step=1000.0
+)
 
 tipo_const_mostrado = st.selectbox(
     'Tipo de construcción',
@@ -93,7 +119,7 @@ if st.button('Predecir estrato'):
     Y_pred = modelo.predict(data_preparada)
 
     resultado = pd.DataFrame({
-        'numero_pis': [numero_pis],
+        'numero_pis': [int(numero_pis)],
         'area_const': [area_const],
         'valor_m2': [valor_m2],
         'tipo_const': [tipo_const],
@@ -102,5 +128,5 @@ if st.button('Predecir estrato'):
     })
 
     st.header('PREDICCIONES')
-    st.dataframe(resultado, use_container_width=True)
+    st.dataframe(resultado, use_container_width=True, hide_index=True)
     st.warning(f'El modelo tiene una exactitud de {exactitud_modelo*100:.0f}%')
