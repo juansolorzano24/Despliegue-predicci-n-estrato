@@ -34,7 +34,7 @@ valor_m2 = st.number_input('Valor por m²', min_value=0.0, max_value=100000000.0
 
 tipo_const = st.selectbox(
     'Tipo de construcción',
-    ['0', '1', 'AL', 'B', 'BQ', 'C', 'CA', 'CD', 'E', 'FI', 'M', 'N', 'P', 'PQ', 'Q', 'TB', 'TO', 'ZC']
+    ['AL', 'B', 'BQ', 'C', 'CA', 'CD', 'E', 'FI', 'M', 'N', 'P', 'PQ', 'Q', 'TB', 'TO', 'ZC']
 )
 
 # =========================
