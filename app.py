@@ -103,5 +103,4 @@ if st.button('Predecir estrato'):
 
     st.header('PREDICCIONES')
     st.dataframe(resultado, use_container_width=True)
-
-    st.warning(f'El modelo tiene una exactitud de {exactitud_modelo:.2f}')
+    st.warning(f'El modelo tiene una exactitud de {exactitud_modelo*100:.0f}%')
