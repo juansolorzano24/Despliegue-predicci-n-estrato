@@ -18,9 +18,9 @@ El objetivo del proyecto es estimar el estrato socioeconómico de un inmueble ut
 
 Las variables utilizadas incluyen:
 
-- Área construida  
+- Área construida (m2)
 - Número de pisos  
-- Valor por metro cuadrado  
+- Valor por metro cuadrado (Pesos colombianos)
 - Identificador del barrio (codificado mediante variables dummy)
 
 La transformación del identificador de barrio generó una alta dimensionalidad (más de 300 variables), lo cual influyó en el comportamiento de los modelos evaluados.
@@ -134,8 +134,4 @@ Funcionalidades:
 - Ingreso de variables del inmueble  
 - Predicción automática del estrato  
 - Interfaz interactiva  
-
----
-
-## 8. Estructura del repositorio
 
