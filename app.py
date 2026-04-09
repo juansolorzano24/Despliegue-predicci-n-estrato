@@ -17,7 +17,7 @@ with open(filename, 'rb') as f:
 # =========================
 # PARÁMETRO DE EXACTITUD
 # =========================
-exactitud_modelo = 0.70
+exactitud_modelo = 0.71
 
 # =========================
 # DICCIONARIO DE TIPOS DE CONSTRUCCIÓN
