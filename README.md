@@ -133,5 +133,15 @@ Funcionalidades:
 
 - Ingreso de variables del inmueble  
 - Predicción automática del estrato  
-- Interfaz interactiva  
+- Interfaz interactiva
+
+## 8. Estructura del repositorio
+El repositorio está organizado de manera modular para facilitar la comprensión, reproducibilidad y despliegue del modelo:
+
+├── ML_Predictivo_Estratos.ipynb
+├── app.py
+├── modelo_arbol.pkl
+├── requirements.txt
+├── README.md
+└── .devcontainer/
 
