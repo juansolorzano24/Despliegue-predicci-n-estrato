@@ -145,3 +145,22 @@ El repositorio está organizado de manera modular para facilitar la comprensión
 ├── README.md
 └── .devcontainer/
 
+### Descripción de archivos
+
+- **ML_Predictivo_Estratos.ipynb**  
+  Notebook principal donde se desarrolla todo el flujo de ciencia de datos: análisis exploratorio, preprocesamiento, entrenamiento de modelos, evaluación de métricas y selección del modelo final.
+
+- **app.py**  
+  Aplicación web desarrollada en **Streamlit** que permite interactuar con el modelo. Recibe variables de entrada del usuario (número de pisos, área, valor por m², tipo de construcción) y retorna la predicción del estrato.
+
+- **modelo_arbol.pkl**  
+  Archivo serializado del modelo de árbol de decisión entrenado. Este archivo es cargado por la aplicación para realizar predicciones sin necesidad de reentrenar el modelo.
+
+- **requirements.txt**  
+  Lista de dependencias necesarias para ejecutar el proyecto (scikit-learn, pandas, streamlit, entre otras), lo que permite reproducir el entorno de trabajo.
+
+- **README.md**  
+  Documento descriptivo del proyecto, que incluye la metodología, modelos evaluados, resultados y forma de uso.
+
+- **.devcontainer/**  
+  Configuración del entorno de desarrollo (Dev Container), que permite ejecutar el proyecto en un entorno controlado y reproducible, especialmente en plataformas como GitHub Codespaces.
